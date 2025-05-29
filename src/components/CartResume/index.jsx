@@ -31,7 +31,7 @@ const submitOrder = async () =>{
         };
     });
     try{
-      const {data} = await api.post('/create-payment-intent',{products});
+      const {data} = await api.post("/create-payment-intent",{products});
      
 navigate('/checkout',{                        
   state: data,
@@ -43,6 +43,7 @@ navigate('/checkout',{
         hideProgressBar:false,
         closeOnClick:true,
         pauseOnHover:true,
+        draggable:true,
         progress:undefined,
         theme:'light',
 
@@ -51,33 +52,7 @@ navigate('/checkout',{
     }
 
 
-    /*try{
-        const {status} = await api.post('/orders',
-             {products}
-            ,{
-
-            validateStatus: () => true,
- });
- 
- 
- if(status === 200 || status === 201 ){
-    
-   setTimeout(()=>{
- navigate('/');
-   },2000);
-   clearCart()
-
-   toast.success('Pedido Realizado com Sucesso!');
- }else if (status === 409){
-   toast .error('Falha ao Realizar o seu Pedido');
-   }else{
- throw new Error();
-   }
- 
- 
- }catch (error){
-   toast.error('falha no sistema! tente noamente');
- }*/
+  
 };
 
 

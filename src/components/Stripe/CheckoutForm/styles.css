@@ -67,6 +67,9 @@
     opacity: 0.5;
     cursor: default;
   }
+  .status-title{
+    text-align: center;
+  }
   
   /* spinner/processing state, errors */
   .spinner,
@@ -201,6 +204,7 @@
   }
   
   #retry-button {
+    text-decoration: none;
     text-align: center;
     background: #0055DE;
     color: #ffffff;

@@ -1,8 +1,9 @@
-import {Table} from '../index';
+
 import { useCart } from '../../hooks/CartContext'; 
 import { FormatPrice } from '../../utils/FormatPrice';
 import { ButtonGroup, EmptyCart, ProductImage, ProductTotalPrice, TrashImage,    } from './styles';
 import TrashIcon from '../../assets/trash.svg';
+import { Table } from '../index';
 export function CartItems(){
     const {cartProducts, decreaseProduct, increaseProduct,deleteProduct} = useCart();
     console.log(cartProducts);
